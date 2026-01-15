@@ -4,7 +4,7 @@
    "icon":"continuousTestingCICD/continuousTestingCICD.svg",
    "descriptionMarkdown":"continuousTestingCICD/continuousTestingCICD.md",
    "topology": [{
-      "name": "Continuous Testing CI/CD Pipeline Topology",
+      "name": "Continuous Testing CI CD Pipeline Topology",
       "actionTitle":"Reserve",
       "description": "STC Port A → NetScout L1 → DUT (Any) → NetScout L1 → STC Port B. CI/CD integration with GitLab/Jenkins/etc. and Velocity + iTest integration. Software/integration work, not hardware.",
       "reservationDuration":"30"
