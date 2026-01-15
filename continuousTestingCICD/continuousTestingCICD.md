@@ -20,7 +20,7 @@ This topology demonstrates continuous testing capabilities where:
 
 ### Topology Diagram
 
-![Continuous Testing CI/CD Pipeline Topology](continuousTestingCICD/continuousTestingCICD.svg)
+![Continuous Testing CI CD Pipeline Topology](continuousTestingCICD/continuousTestingCICD.svg)
 
 ### Topology Details
 - **Traffic Source**: STC Port A (automated)
