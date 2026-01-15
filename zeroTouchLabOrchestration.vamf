@@ -1,0 +1,13 @@
+{
+   "name":"Zero-Touch Lab Orchestration",
+   "shortDescription": "Activity demonstrating automated lab orchestration: User selects topology → Velocity allocates ports → NetScout L1 auto-patches → DUT gets configured → STC runs a test.",
+   "icon":"zeroTouchLabOrchestration/zeroTouchLabOrchestration.svg",
+   "descriptionMarkdown":"zeroTouchLabOrchestration/zeroTouchLabOrchestration.md",
+   "topology": [{
+      "name": "Zero-Touch Lab Orchestration Topology",
+      "actionTitle":"Reserve",
+      "description": "User selects topology → Velocity allocates ports → NetScout L1 auto-patches → DUT gets configured → STC runs a test. Fully automated zero-touch lab provisioning and test execution.",
+      "reservationDuration":"45"
+    }]
+}
+

@@ -1,0 +1,13 @@
+{
+   "name":"Layer 2 Traffic Flow",
+   "shortDescription": "Activity for testing Layer 2 traffic flow with VLAN configuration on DUT switch (Arista or Cisco).",
+   "icon":"layer2TrafficFlow/layer2TrafficFlow.svg",
+   "descriptionMarkdown":"layer2TrafficFlow/layer2TrafficFlow.md",
+   "topology": [{
+      "name": "Layer 2 Traffic Flow Topology",
+      "actionTitle":"Reserve",
+      "description": "STC Port A → NetScout L1 → DUT Switch (Arista or Cisco) → NetScout L1 → STC Port B. Configure VLANs on DUT (and optionally trunk/access mixes), generate traffic from STC.",
+      "reservationDuration":"60"
+    }]
+}
+

@@ -1,0 +1,12 @@
+{
+   "name":"Velocity User Workflow Guide",
+   "shortDescription": "Activity introduces an overview of a user workflow.",
+   "icon":"customActivity/customActivity.svg",
+   "descriptionMarkdown":"customActivity/customActivity.md",
+   "topology": [{
+      "name": "Loopback Traffic Test",
+      "actionTitle":"Reserve",
+      "description": "This is a simple loopback traffic with Spirent Test Center VM.",
+      "reservationDuration":"30"
+    }]
+}

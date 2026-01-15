@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+    <defs>
+        <style>
+            .device { fill: #4A90E2; stroke: #2E5C8A; stroke-width: 2; }
+            .link { stroke: #666; stroke-width: 2; fill: none; }
+            .dashed-link { stroke: #666; stroke-width: 2; fill: none; stroke-dasharray: 5,5; }
+            .solid-link { stroke: #666; stroke-width: 2; fill: none; }
+            .label { font-family: Arial, sans-serif; font-size: 11px; fill: #333; }
+            .arrow { fill: #666; }
+            .dut { fill: #50C878; }
+            .topology-box { fill: #ECF0F1; stroke: #BDC3C7; stroke-width: 2; }
+            .lab-site { fill: #9B59B6; stroke: #7D3C98; stroke-width: 2; }
+            .abstraction { fill: #F39C12; stroke: #D68910; stroke-width: 2; }
+            .shared-resource { fill: #E74C3C; stroke: #C0392B; stroke-width: 2; }
+            .title-text { font-family: Arial, sans-serif; font-size: 16px; fill: #2C3E50; font-weight: bold; }
+            .concept-text { font-family: Arial, sans-serif; font-size: 12px; fill: #7F8C8D; font-style: italic; }
+        </style>
+    </defs>
+    
+    <!-- Title -->
+    <text x="300" y="25" text-anchor="middle" class="title-text">Global Resource Sharing</text>
+    
+    <!-- Resource Abstraction Layer (Top) -->
+    <rect x="150" y="45" width="300" height="50" rx="5" class="abstraction"/>
+    <text x="300" y="70" text-anchor="middle" class="label" font-weight="bold" fill="white">Resource Abstraction Layer</text>
+    <text x="300" y="85" text-anchor="middle" class="label" font-size="10" fill="white">Prevents Resource Hoarding</text>
+    
+    <!-- Topology1 Section (Left) -->
+    <rect x="50" y="120" width="220" height="140" rx="5" class="topology-box"/>
+    <text x="160" y="145" text-anchor="middle" class="label" font-size="14" font-weight="bold">Topology1</text>
+    
+    <!-- Lab-Site Label for Topology1 -->
+    <rect x="60" y="155" width="100" height="25" rx="3" class="lab-site"/>
+    <text x="110" y="172" text-anchor="middle" class="label" font-size="10" fill="white" font-weight="bold">Lab-Site A</text>
+    
+    <!-- DUT1 in Topology1 -->
+    <rect x="70" y="190" width="80" height="50" rx="5" class="device dut shared-resource"/>
+    <text x="110" y="215" text-anchor="middle" class="label" font-weight="bold" fill="white">DUT1</text>
+    <text x="110" y="230" text-anchor="middle" class="label" font-size="9" fill="white">Shared</text>
+    
+    <!-- DUT2 in Topology1 -->
+    <rect x="170" y="190" width="80" height="50" rx="5" class="device dut shared-resource"/>
+    <text x="210" y="215" text-anchor="middle" class="label" font-weight="bold" fill="white">DUT2</text>
+    <text x="210" y="230" text-anchor="middle" class="label" font-size="9" fill="white">Shared</text>
+    
+    <!-- Topology2 Section (Right) -->
+    <rect x="330" y="120" width="220" height="140" rx="5" class="topology-box"/>
+    <text x="440" y="145" text-anchor="middle" class="label" font-size="14" font-weight="bold">Topology2</text>
+    
+    <!-- Lab-Site Label for Topology2 -->
+    <rect x="340" y="155" width="100" height="25" rx="3" class="lab-site"/>
+    <text x="390" y="172" text-anchor="middle" class="label" font-size="10" fill="white" font-weight="bold">Lab-Site B</text>
+    
+    <!-- DUT1 Access in Topology2 (dashed, showing shared access) -->
+    <rect x="350" y="190" width="80" height="50" rx="5" class="device dut" stroke-dasharray="5,5" opacity="0.6"/>
+    <text x="390" y="215" text-anchor="middle" class="label" font-weight="bold">DUT1</text>
+    <text x="390" y="230" text-anchor="middle" class="label" font-size="9">Shared</text>
+    
+    <!-- DUT2 Access in Topology2 (dashed, showing shared access) -->
+    <rect x="450" y="190" width="80" height="50" rx="5" class="device dut" stroke-dasharray="5,5" opacity="0.6"/>
+    <text x="490" y="215" text-anchor="middle" class="label" font-weight="bold">DUT2</text>
+    <text x="490" y="230" text-anchor="middle" class="label" font-size="9">Shared</text>
+    
+    <!-- Sharing Arrows from Topology1 to Topology2 -->
+    <path d="M 270 215 L 330 215" class="dashed-link"/>
+    <polygon points="330,215 325,212 325,218" class="arrow"/>
+    <text x="300" y="210" text-anchor="middle" class="label" font-size="9" fill="#7F8C8D">Shares</text>
+    
+    <path d="M 270 230 L 330 230" class="dashed-link"/>
+    <polygon points="330,230 325,227 325,233" class="arrow"/>
+    
+    <!-- Connection from Abstraction Layer to Topology1 -->
+    <path d="M 200 95 L 160 120" class="solid-link"/>
+    
+    <!-- Connection from Abstraction Layer to Topology2 -->
+    <path d="M 400 95 L 440 120" class="solid-link"/>
+    
+    <!-- Divider Line -->
+    <line x1="0" y1="280" x2="600" y2="280" stroke="#BDC3C7" stroke-width="2"/>
+    
+    <!-- Resource Pool Visualization (Bottom) -->
+    <text x="300" y="305" text-anchor="middle" class="label" font-size="14" font-weight="bold">Global Resource Pool</text>
+    
+    <!-- Resource Pool Box -->
+    <rect x="100" y="320" width="400" height="80" rx="5" class="topology-box"/>
+    
+    <!-- Resources in Pool -->
+    <rect x="120" y="340" width="70" height="40" rx="5" class="device dut shared-resource"/>
+    <text x="155" y="365" text-anchor="middle" class="label" font-weight="bold" fill="white" font-size="10">DUT1</text>
+    
+    <rect x="210" y="340" width="70" height="40" rx="5" class="device dut shared-resource"/>
+    <text x="245" y="365" text-anchor="middle" class="label" font-weight="bold" fill="white" font-size="10">DUT2</text>
+    
+    <rect x="300" y="340" width="70" height="40" rx="5" class="device dut"/>
+    <text x="335" y="365" text-anchor="middle" class="label" font-weight="bold" fill="white" font-size="10">DUT3</text>
+    
+    <rect x="390" y="340" width="70" height="40" rx="5" class="device dut"/>
+    <text x="425" y="365" text-anchor="middle" class="label" font-weight="bold" fill="white" font-size="10">DUT4</text>
+    
+    <!-- Arrows from Topology1 to Resource Pool -->
+    <path d="M 160 260 L 155 320" class="dashed-link"/>
+    <path d="M 210 260 L 245 320" class="dashed-link"/>
+    
+    <!-- Arrows from Topology2 to Resource Pool (showing access) -->
+    <path d="M 390 260 L 155 320" class="dashed-link" opacity="0.5"/>
+    <path d="M 490 260 L 245 320" class="dashed-link" opacity="0.5"/>
+    
+    <!-- Concept Label -->
+    <text x="300" y="435" text-anchor="middle" class="concept-text">Resource Abstraction Prevents Hoarding - Resources Shared Across Topologies and Lab-Sites</text>
+    
+    <!-- Additional Labels -->
+    <text x="50" y="275" text-anchor="start" class="label" font-size="9" fill="#7F8C8D">Owns Resources</text>
+    <text x="330" y="275" text-anchor="start" class="label" font-size="9" fill="#7F8C8D">Accesses Shared Resources</text>
+</svg>
+
