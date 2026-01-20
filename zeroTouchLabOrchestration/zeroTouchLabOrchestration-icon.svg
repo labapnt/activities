@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+    <defs>
+        <style>
+            .center-circle { fill: #9B59B6; }
+            .automation-ring { fill: none; stroke: #9B59B6; stroke-width: 4; }
+            .flow-arrow { fill: #9B59B6; }
+            .play-icon { fill: #FFFFFF; }
+        </style>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="256" height="256" fill="#FFFFFF"/>
+    
+    <!-- Outer automation ring -->
+    <circle cx="128" cy="128" r="90" class="automation-ring" stroke-dasharray="12,6"/>
+    
+    <!-- Central orchestration hub -->
+    <circle cx="128" cy="128" r="50" class="center-circle"/>
+    
+    <!-- Play/Automation icon in center -->
+    <path d="M 108 98 L 108 158 L 158 128 Z" class="play-icon"/>
+    
+    <!-- Circular flow arrows around the center -->
+    <g transform="translate(128, 128)">
+        <!-- Top arrow -->
+        <circle cx="0" cy="-70" r="12" fill="#9B59B6"/>
+        <path d="M 0 -58 L 0 -50" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -4 -54 L 0 -50 L 4 -54" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Right arrow -->
+        <circle cx="70" cy="0" r="12" fill="#9B59B6"/>
+        <path d="M 58 0 L 50 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 54 -4 L 50 0 L 54 4" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Bottom arrow -->
+        <circle cx="0" cy="70" r="12" fill="#9B59B6"/>
+        <path d="M 0 58 L 0 50" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -4 54 L 0 50 L 4 54" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Left arrow -->
+        <circle cx="-70" cy="0" r="12" fill="#9B59B6"/>
+        <path d="M -58 0 L -50 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -54 -4 L -50 0 L -54 4" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+</svg>
