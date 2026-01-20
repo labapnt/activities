@@ -49,3 +49,7 @@ The zero-touch orchestration workflow eliminates manual configuration steps and 
    - Configures traffic profiles
    - Executes test scenarios
    - Collects results
+
+### Exercise Instructions
+
+For detailed step-by-step exercise instructions, see [Automation Exercise Guide](automation_exercise.md).
