@@ -1,45 +1,200 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
     <defs>
         <style>
-            .center-circle { fill: #9B59B6; }
-            .automation-ring { fill: none; stroke: #9B59B6; stroke-width: 4; }
-            .flow-arrow { fill: #9B59B6; }
-            .play-icon { fill: #FFFFFF; }
+            .device { fill: #4A90E2; stroke: #2E5C8A; stroke-width: 2; pointer-events: all; cursor: pointer; }
+            .link { stroke: #666; stroke-width: 2; fill: none; stroke-dasharray: 5,5; pointer-events: all; cursor: pointer; }
+            .solid-link { stroke: #666; stroke-width: 2; fill: none; }
+            .label { font-family: Arial, sans-serif; font-size: 11px; fill: #333; pointer-events: none; }
+            .arrow { fill: #666; }
+            .velocity { fill: #9B59B6; }
+            .stc { fill: #64CCDA; }
+            .netscout { fill: #FFB84D; }
+            .dut { fill: #50C878; }
+            .user { fill: #E74C3C; }
+            .step-box { fill: #ECF0F1; stroke: #BDC3C7; stroke-width: 1; pointer-events: all; cursor: pointer; }
+            .step-label { font-family: Arial, sans-serif; font-size: 10px; fill: #2C3E50; font-weight: bold; pointer-events: none; }
+            .hover-group { pointer-events: all; cursor: help; }
         </style>
     </defs>
     
-    <!-- Background -->
-    <rect width="256" height="256" fill="#FFFFFF"/>
+    <!-- Title -->
+    <text x="250" y="25" text-anchor="middle" class="label" font-size="18" font-weight="bold">Zero-Touch Lab Orchestration</text>
     
-    <!-- Outer automation ring -->
-    <circle cx="128" cy="128" r="90" class="automation-ring" stroke-dasharray="12,6"/>
+    <!-- User -->
+    <g class="hover-group">
+        <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        <circle cx="50" cy="80" r="25" class="device user">
+            <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        </circle>
+        <text x="50" y="85" text-anchor="middle" class="label" font-weight="bold" fill="white">User</text>
+    </g>
     
-    <!-- Central orchestration hub -->
-    <circle cx="128" cy="128" r="50" class="center-circle"/>
+    <!-- Step 1: User selects topology -->
+    <g class="hover-group">
+        <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        <rect x="20" y="110" width="60" height="30" rx="3" class="step-box">
+            <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        </rect>
+        <text x="50" y="130" text-anchor="middle" class="step-label">1. Selects</text>
+        <text x="50" y="142" text-anchor="middle" class="step-label">Topology</text>
+    </g>
     
-    <!-- Play/Automation icon in center -->
-    <path d="M 108 98 L 108 158 L 158 128 Z" class="play-icon"/>
+    <!-- Arrow 1 -->
+    <path d="M 75 80 L 100 80" class="solid-link"/>
+    <polygon points="100,80 95,77 95,83" class="arrow"/>
     
-    <!-- Circular flow arrows around the center -->
-    <g transform="translate(128, 128)">
-        <!-- Top arrow -->
-        <circle cx="0" cy="-70" r="12" fill="#9B59B6"/>
-        <path d="M 0 -58 L 0 -50" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M -4 -54 L 0 -50 L 4 -54" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Velocity Platform -->
+    <g class="hover-group">
+        <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        <rect x="100" y="50" width="100" height="60" rx="5" class="device velocity">
+            <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        </rect>
+        <text x="150" y="75" text-anchor="middle" class="label" font-weight="bold" fill="white">Velocity</text>
+        <text x="150" y="90" text-anchor="middle" class="label" font-weight="bold" fill="white">Platform</text>
+        <text x="150" y="105" text-anchor="middle" class="label" font-size="9" fill="white">Orchestration</text>
+    </g>
+    
+    <!-- Step 2: Velocity allocates ports -->
+    <g class="hover-group">
+        <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        <rect x="110" y="115" width="80" height="30" rx="3" class="step-box">
+            <title>Automated Topology Provisioning Test: Select a topology from catalog, Verify automatic port allocation, Validate resource reservation, Confirm connectivity establishment</title>
+        </rect>
+        <text x="150" y="135" text-anchor="middle" class="step-label">2. Allocates</text>
+        <text x="150" y="147" text-anchor="middle" class="step-label">Ports</text>
+    </g>
+    
+    <!-- Arrow 2 -->
+    <path d="M 200 80 L 220 80" class="solid-link"/>
+    <polygon points="220,80 215,77 215,83" class="arrow"/>
+    
+    <!-- NetScout L1 -->
+    <g class="hover-group">
+        <title>Auto-Patching Validation Test: Verify NetScout L1 auto-patching, Validate port mirroring configuration, Confirm traffic visibility, Test monitoring capabilities</title>
+        <rect x="220" y="50" width="70" height="60" rx="5" class="device netscout">
+            <title>Auto-Patching Validation Test: Verify NetScout L1 auto-patching, Validate port mirroring configuration, Confirm traffic visibility, Test monitoring capabilities</title>
+        </rect>
+        <text x="255" y="75" text-anchor="middle" class="label" font-weight="bold" fill="white">NetScout</text>
+        <text x="255" y="90" text-anchor="middle" class="label" font-weight="bold" fill="white">L1</text>
+        <text x="255" y="105" text-anchor="middle" class="label" font-size="9" fill="white">Auto-Patch</text>
+    </g>
+    
+    <!-- Step 3: NetScout auto-patches -->
+    <g class="hover-group">
+        <title>Auto-Patching Validation Test: Verify NetScout L1 auto-patching, Validate port mirroring configuration, Confirm traffic visibility, Test monitoring capabilities</title>
+        <rect x="225" y="115" width="60" height="30" rx="3" class="step-box">
+            <title>Auto-Patching Validation Test: Verify NetScout L1 auto-patching, Validate port mirroring configuration, Confirm traffic visibility, Test monitoring capabilities</title>
+        </rect>
+        <text x="255" y="135" text-anchor="middle" class="step-label">3. Auto-</text>
+        <text x="255" y="147" text-anchor="middle" class="step-label">Patches</text>
+    </g>
+    
+    <!-- Arrow 3 -->
+    <path d="M 290 80 L 310 80" class="solid-link"/>
+    <polygon points="310,80 305,77 305,83" class="arrow"/>
+    
+    <!-- DUT -->
+    <g class="hover-group">
+        <title>Automated DUT Configuration Test: Verify automatic DUT connection, Validate configuration template application, Confirm configuration verification, Test rollback capabilities</title>
+        <rect x="310" y="50" width="70" height="60" rx="5" class="device dut">
+            <title>Automated DUT Configuration Test: Verify automatic DUT connection, Validate configuration template application, Confirm configuration verification, Test rollback capabilities</title>
+        </rect>
+        <text x="345" y="75" text-anchor="middle" class="label" font-weight="bold" fill="white">DUT</text>
+        <text x="345" y="90" text-anchor="middle" class="label" font-weight="bold" fill="white">Switch</text>
+        <text x="345" y="105" text-anchor="middle" class="label" font-size="9" fill="white">Auto-Config</text>
+    </g>
+    
+    <!-- Step 4: DUT gets configured -->
+    <g class="hover-group">
+        <title>Automated DUT Configuration Test: Verify automatic DUT connection, Validate configuration template application, Confirm configuration verification, Test rollback capabilities</title>
+        <rect x="315" y="115" width="60" height="30" rx="3" class="step-box">
+            <title>Automated DUT Configuration Test: Verify automatic DUT connection, Validate configuration template application, Confirm configuration verification, Test rollback capabilities</title>
+        </rect>
+        <text x="345" y="135" text-anchor="middle" class="step-label">4. Gets</text>
+        <text x="345" y="147" text-anchor="middle" class="step-label">Configured</text>
+    </g>
+    
+    <!-- Arrow 4 -->
+    <path d="M 380 80 L 400 80" class="solid-link"/>
+    <polygon points="400,80 395,77 395,83" class="arrow"/>
+    
+    <!-- STC -->
+    <g class="hover-group">
+        <title>End-to-End Automated Test Execution: Execute complete zero-touch workflow, Verify all automation steps, Validate test results collection, Confirm automated reporting</title>
+        <rect x="400" y="50" width="70" height="60" rx="5" class="device stc">
+            <title>End-to-End Automated Test Execution: Execute complete zero-touch workflow, Verify all automation steps, Validate test results collection, Confirm automated reporting</title>
+        </rect>
+        <text x="435" y="75" text-anchor="middle" class="label" font-weight="bold" fill="white">STC</text>
+        <text x="435" y="90" text-anchor="middle" class="label" font-weight="bold" fill="white">Test</text>
+        <text x="435" y="105" text-anchor="middle" class="label" font-size="9" fill="white">Center</text>
+    </g>
+    
+    <!-- Step 5: STC runs test -->
+    <g class="hover-group">
+        <title>End-to-End Automated Test Execution: Execute complete zero-touch workflow, Verify all automation steps, Validate test results collection, Confirm automated reporting</title>
+        <rect x="405" y="115" width="60" height="30" rx="3" class="step-box">
+            <title>End-to-End Automated Test Execution: Execute complete zero-touch workflow, Verify all automation steps, Validate test results collection, Confirm automated reporting</title>
+        </rect>
+        <text x="435" y="135" text-anchor="middle" class="step-label">5. Runs</text>
+        <text x="435" y="147" text-anchor="middle" class="step-label">Test</text>
+    </g>
+    
+    <!-- Orchestration Flow (dashed lines showing automation) -->
+    <g class="hover-group">
+        <title>Multi-Topology Orchestration Test: Select multiple topologies, Verify parallel resource allocation, Validate concurrent test execution, Confirm resource isolation</title>
+        <path d="M 150 110 L 150 180 L 50 180 L 50 200" class="link">
+            <title>Multi-Topology Orchestration Test: Select multiple topologies, Verify parallel resource allocation, Validate concurrent test execution, Confirm resource isolation</title>
+        </path>
+        <path d="M 50 200 L 450 200" class="link">
+            <title>Multi-Topology Orchestration Test: Select multiple topologies, Verify parallel resource allocation, Validate concurrent test execution, Confirm resource isolation</title>
+        </path>
+        <path d="M 450 200 L 450 180 L 435 180 L 435 110" class="link">
+            <title>Multi-Topology Orchestration Test: Select multiple topologies, Verify parallel resource allocation, Validate concurrent test execution, Confirm resource isolation</title>
+        </path>
         
-        <!-- Right arrow -->
-        <circle cx="70" cy="0" r="12" fill="#9B59B6"/>
-        <path d="M 58 0 L 50 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M 54 -4 L 50 0 L 54 4" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Automation Label -->
+        <text x="250" y="195" text-anchor="middle" class="label" font-size="10" fill="#7F8C8D" font-style="italic">Automated Orchestration Flow</text>
+    </g>
+    
+    <!-- Bottom section: Detailed flow -->
+    <line x1="0" y1="250" x2="500" y2="250" stroke="#BDC3C7" stroke-width="1"/>
+    
+    <text x="250" y="270" text-anchor="middle" class="label" font-size="14" font-weight="bold">Workflow Steps</text>
+    
+    <!-- Workflow steps visualization -->
+    <g transform="translate(50, 290)">
+        <!-- Step indicators -->
+        <circle cx="0" cy="0" r="8" fill="#E74C3C"/>
+        <text x="0" y="25" text-anchor="middle" class="label" font-size="9">User</text>
+        <text x="0" y="37" text-anchor="middle" class="label" font-size="9">Selects</text>
         
-        <!-- Bottom arrow -->
-        <circle cx="0" cy="70" r="12" fill="#9B59B6"/>
-        <path d="M 0 58 L 0 50" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M -4 54 L 0 50 L 4 54" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 20 0 L 80 0" class="solid-link"/>
+        <polygon points="80,0 75,-3 75,3" class="arrow"/>
         
-        <!-- Left arrow -->
-        <circle cx="-70" cy="0" r="12" fill="#9B59B6"/>
-        <path d="M -58 0 L -50 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M -54 -4 L -50 0 L -54 4" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="100" cy="0" r="8" fill="#9B59B6"/>
+        <text x="100" y="25" text-anchor="middle" class="label" font-size="9">Velocity</text>
+        <text x="100" y="37" text-anchor="middle" class="label" font-size="9">Allocates</text>
+        
+        <path d="M 120 0 L 180 0" class="solid-link"/>
+        <polygon points="180,0 175,-3 175,3" class="arrow"/>
+        
+        <circle cx="200" cy="0" r="8" fill="#FFB84D"/>
+        <text x="200" y="25" text-anchor="middle" class="label" font-size="9">NetScout</text>
+        <text x="200" y="37" text-anchor="middle" class="label" font-size="9">Auto-Patch</text>
+        
+        <path d="M 220 0 L 280 0" class="solid-link"/>
+        <polygon points="280,0 275,-3 275,3" class="arrow"/>
+        
+        <circle cx="300" cy="0" r="8" fill="#50C878"/>
+        <text x="300" y="25" text-anchor="middle" class="label" font-size="9">DUT</text>
+        <text x="300" y="37" text-anchor="middle" class="label" font-size="9">Config</text>
+        
+        <path d="M 320 0 L 380 0" class="solid-link"/>
+        <polygon points="380,0 375,-3 375,3" class="arrow"/>
+        
+        <circle cx="400" cy="0" r="8" fill="#64CCDA"/>
+        <text x="400" y="25" text-anchor="middle" class="label" font-size="9">STC</text>
+        <text x="400" y="37" text-anchor="middle" class="label" font-size="9">Runs Test</text>
     </g>
 </svg>
+
