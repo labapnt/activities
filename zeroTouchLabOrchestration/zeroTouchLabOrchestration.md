@@ -16,7 +16,7 @@ This topology demonstrates a fully automated lab orchestration workflow where:
 
 ### Topology Diagram
 
-![Zero-Touch Lab Orchestration Topology](zeroTouchLabOrchestration/zeroTouchLabOrchestration-diagram.svg)
+![Zero-Touch Lab Orchestration Topology](zeroTouchLabOrchestration-diagram.svg)
 
 ### Topology Details
 - **Orchestration Platform**: Velocity
@@ -49,3 +49,7 @@ The zero-touch orchestration workflow eliminates manual configuration steps and 
    - Configures traffic profiles
    - Executes test scenarios
    - Collects results
+
+### Topology Exercises
+
+For detailed step-by-step exercise instructions, see [Automation Exercise Guide](https://github.com/labapnt/activities/blob/main/zeroTouchLabOrchestration/automation_exercise.md).
