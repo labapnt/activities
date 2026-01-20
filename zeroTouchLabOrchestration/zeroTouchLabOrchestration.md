@@ -16,7 +16,7 @@ This topology demonstrates a fully automated lab orchestration workflow where:
 
 ### Topology Diagram
 
-![Zero-Touch Lab Orchestration Topology](zeroTouchLabOrchestration.svg)
+<img src="zeroTouchLabOrchestration/zeroTouchLabOrchestration.svg" alt="Zero-Touch Lab Orchestration Topology" style="max-width: 100%; height: auto;" />
 
 ### Topology Details
 - **Orchestration Platform**: Velocity
