@@ -50,38 +50,6 @@ The continuous testing pipeline integrates network testing into software develop
 6. **Pipeline Decision**: Pass/fail decision based on test results
 7. **Reporting**: Test reports generated and attached to CI/CD pipeline
 
-### Test Cases
-
-1. **CI/CD Pipeline Integration Test**:
-   - Trigger test from CI/CD runner
-   - Verify Velocity + iTest integration
-   - Validate test environment provisioning
-   - Confirm test execution automation
-
-2. **Automated Network Regression Test**:
-   - Execute network tests on code changes
-   - Verify DUT behavior with new software/firmware
-   - Validate network functionality
-   - Compare results against baseline
-
-3. **Continuous Performance Testing**:
-   - Execute performance tests in CI/CD pipeline
-   - Monitor network performance metrics
-   - Validate performance thresholds
-   - Generate performance reports
-
-4. **Multi-Device Testing Pipeline**:
-   - Test multiple DUT types in parallel
-   - Execute device-specific test suites
-   - Aggregate results across devices
-   - Generate consolidated reports
-
-5. **Integration Test Suite Execution**:
-   - Run comprehensive integration test suite
-   - Validate end-to-end network functionality
-   - Test interoperability between components
-   - Verify configuration compatibility
-
 ### Velocity + iTest Integration
 
 #### Integration Components
@@ -98,60 +66,6 @@ The continuous testing pipeline integrates network testing into software develop
 - **Artifact Management**: Store and retrieve test artifacts
 - **Notification Integration**: Send test results to various notification channels
 - **Baseline Comparison**: Compare test results against baseline metrics
-
-### Best Practices
-
-1. **Pipeline Configuration**: 
-   - Use version-controlled pipeline configurations
-   - Implement proper secret management
-   - Set appropriate timeout values
-   - Configure retry logic for transient failures
-
-2. **Test Environment Management**:
-   - Reserve topologies early in pipeline
-   - Implement topology cleanup in finally blocks
-   - Use topology templates for consistency
-   - Monitor topology availability
-
-3. **Test Execution**:
-   - Run fast tests first (smoke tests)
-   - Execute comprehensive tests on main branches
-   - Use parallel test execution when possible
-   - Implement test result caching
-
-4. **Result Management**:
-   - Standardize result formats (JUnit XML, etc.)
-   - Archive test artifacts for debugging
-   - Implement result comparison and trending
-   - Set up test result dashboards
-
-5. **Error Handling**:
-   - Implement proper error handling and cleanup
-   - Always release topologies in finally blocks
-   - Log detailed error information
-   - Notify on test failures
-
-6. **Performance Optimization**:
-   - Minimize topology reservation time
-   - Use test result caching
-   - Implement parallel test execution
-   - Optimize test suite selection
-
-7. **Security**:
-   - Use secure credential management
-   - Implement API token rotation
-   - Restrict API access permissions
-   - Audit pipeline executions
-
-### Troubleshooting
-
-- **CI/CD Integration Failures**: Verify API credentials and connectivity
-- **Topology Reservation Issues**: Check topology availability and resource limits
-- **Test Execution Failures**: Review test logs and DUT configuration
-- **Result Collection Problems**: Verify result format and parsing logic
-- **Pipeline Timeouts**: Increase timeout values or optimize test execution
-- **Authentication Errors**: Verify API tokens and permissions
-- **Resource Conflicts**: Implement proper resource locking and cleanup
 
 ### Benefits of CI/CD Integration
 

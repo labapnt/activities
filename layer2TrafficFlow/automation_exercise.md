@@ -120,6 +120,38 @@ interface GigabitEthernet0/2
 6. **Verification**: Always verify DUT switch configuration before running traffic tests
 7. **Baseline**: Establish baseline performance metrics before testing different configurations
 
+### Test Cases
+
+1. **Basic Layer 2 Traffic Flow Test**: 
+   - Configure basic VLAN on DUT switch
+   - Generate traffic from STC Port A to STC Port B
+   - Verify traffic flow through the DUT switch
+   - Monitor traffic using NetScout L1 devices
+
+2. **VLAN Trunk Configuration Test**:
+   - Configure VLAN trunk ports on DUT switch
+   - Generate tagged traffic from STC Port A
+   - Verify VLAN tagging/untagging through the switch
+   - Validate traffic reception on STC Port B
+
+3. **VLAN Access Port Configuration Test**:
+   - Configure VLAN access ports on DUT switch
+   - Generate untagged traffic from STC Port A
+   - Verify VLAN assignment on access ports
+   - Validate traffic flow to STC Port B
+
+4. **Mixed Trunk/Access Port Configuration Test**:
+   - Configure a mix of trunk and access ports on DUT switch
+   - Generate traffic with various VLAN configurations
+   - Verify proper VLAN handling across different port types
+   - Validate end-to-end traffic flow
+
+5. **Multiple VLAN Traffic Flow Test**:
+   - Configure multiple VLANs on DUT switch
+   - Generate traffic for different VLANs from STC Port A
+   - Verify VLAN isolation and proper forwarding
+   - Validate traffic reception per VLAN on STC Port B
+
 ### Troubleshooting
 
 - **No Traffic Received**: Verify VLAN configuration on DUT switch and port assignments
