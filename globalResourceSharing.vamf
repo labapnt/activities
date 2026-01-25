@@ -4,9 +4,9 @@
    "icon":"globalResourceSharing/globalResourceSharing-icon.svg",
    "descriptionMarkdown":"globalResourceSharing/globalResourceSharing.md",
    "topology": [{
-      "name": "Global Resource Sharing Topology",
+      "name": "Global Resource Sharing",
       "actionTitle":"Reserve",
-      "description": "Topology1 has resources DUT1 and DUT2 that are shared with resources from another lab-site, Topology2. Concept shows how to avoid hoarding resources by any user or team with the use of resource abstraction.",
+      "description": "The topology diagram illustrates a Global Resource Sharing concept across two independent locations, Lab Site 1 and Lab Site 2, which contain networked resources like Arista switches and VyOS routers.",
       "reservationDuration":"60"
     }]
 }

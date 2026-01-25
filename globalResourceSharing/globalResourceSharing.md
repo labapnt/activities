@@ -5,11 +5,24 @@ This activity catalog describes the concept of global resource sharing across mu
 ## Topology: GLOBAL RESOURCE SHARING
 
 ### Topology Description
-**TOPOLOGY1 has resources DUT1 and DUT2 that are shared with resources from another "LAB-SITE", TOPOLOGY2.**
+**Two Lab Sites (Lab Site 1 and Lab Site 2) sharing resources across network topologies.**
 
-This topology demonstrates global resource sharing capabilities where:
-- **Topology1**: Contains resources DUT1 and DUT2
-- **Topology2**: Another lab-site that shares resources with Topology1
+This topology demonstrates global resource sharing capabilities with two lab sites, each containing:
+
+**Lab Site 1:**
+- **Arista L2 Switch** (IP: 192.168.168.112) - Primary switching device
+- **vSTC-03** (IP: 192.168.168.220) - Spirent Test Center virtual instance
+- **VyOS Router** (IP: 192.168.168.126) - Routing device
+- **Connections**: Ethernet (ETH) links connecting all nodes
+
+**Lab Site 2:**
+- **Arista L2 Switch** (IP: 192.168.168.111) - Primary switching device
+- **vSTC-04** (IP: 192.168.168.204) - Spirent Test Center virtual instance
+- **VyOS Router** (IP: 192.168.168.105) - Routing device
+- **Connections**: Ethernet (ETH) links connecting all nodes
+
+**Resource Sharing:**
+- Resources from Lab Site 1 and Lab Site 2 are shared across topologies
 - **Resource Abstraction**: Mechanism that enables resource sharing without hoarding
 - **Global Sharing**: Resources can be shared across different topologies and lab-sites
 
