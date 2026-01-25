@@ -1,7 +1,7 @@
 {
    "name":"Global Resource Sharing",
    "shortDescription": "Activity demonstrating global resource sharing across topologies and lab-sites. Topology1 has resources DUT1 and DUT2 shared with Topology2. Shows how to avoid hoarding resources using resource abstraction.",
-   "icon":"globalResourceSharing/globalResourceSharing.svg",
+   "icon":"globalResourceSharing/globalResourceSharing-icon.svg",
    "descriptionMarkdown":"globalResourceSharing/globalResourceSharing.md",
    "topology": [{
       "name": "Global Resource Sharing Topology",

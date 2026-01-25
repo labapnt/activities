@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+    <defs>
+        <style>
+            .center-circle { fill: #64CCDA; }
+            .automation-ring { fill: none; stroke: #64CCDA; stroke-width: 4; }
+            .flow-arrow { fill: #64CCDA; }
+            .user-icon { fill: #FFFFFF; }
+        </style>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="256" height="256" fill="#FFFFFF"/>
+    
+    <!-- Outer automation ring -->
+    <circle cx="128" cy="128" r="90" class="automation-ring" stroke-dasharray="12,6"/>
+    
+    <!-- Central workflow hub -->
+    <circle cx="128" cy="128" r="50" class="center-circle"/>
+    
+    <!-- User/workflow icon in center -->
+    <g transform="translate(128, 128)">
+        <!-- User head -->
+        <circle cx="0" cy="-8" r="10" class="user-icon"/>
+        <!-- User body -->
+        <path d="M -12 2 Q -12 8, 0 8 Q 12 8, 12 2 L 12 18 L -12 18 Z" class="user-icon"/>
+    </g>
+    
+    <!-- Circular flow arrows around the center -->
+    <g transform="translate(128, 128)">
+        <!-- Top arrow -->
+        <circle cx="0" cy="-70" r="12" fill="#64CCDA"/>
+        <path d="M 0 -58 L 0 -50" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -4 -54 L 0 -50 L 4 -54" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Right arrow -->
+        <circle cx="70" cy="0" r="12" fill="#64CCDA"/>
+        <path d="M 58 0 L 50 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M 54 -4 L 50 0 L 54 4" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Bottom arrow -->
+        <circle cx="0" cy="70" r="12" fill="#64CCDA"/>
+        <path d="M 0 58 L 0 50" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -4 54 L 0 50 L 4 54" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        
+        <!-- Left arrow -->
+        <circle cx="-70" cy="0" r="12" fill="#64CCDA"/>
+        <path d="M -58 0 L -50 0" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M -54 -4 L -50 0 L -54 4" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+</svg>
+

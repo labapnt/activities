@@ -1,7 +1,7 @@
 {
    "name":"Velocity User Workflow Guide",
    "shortDescription": "Activity introduces an overview of a user workflow.",
-   "icon":"customActivity/customActivity.svg",
+   "icon":"customActivity/customActivity-icon.svg",
    "descriptionMarkdown":"customActivity/customActivity.md",
    "topology": [{
       "name": "Loopback Traffic Test",

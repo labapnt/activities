@@ -1,7 +1,7 @@
 {
    "name":"Layer 2 Traffic Flow",
    "shortDescription": "Activity for testing Layer 2 traffic flow with VLAN configuration on DUT switch (Arista or Cisco).",
-   "icon":"layer2TrafficFlow/layer2TrafficFlow.svg",
+   "icon":"layer2TrafficFlow/layer2TrafficFlow-icon.svg",
    "descriptionMarkdown":"layer2TrafficFlow/layer2TrafficFlow.md",
    "topology": [{
       "name": "Layer 2 Traffic Flow Topology",

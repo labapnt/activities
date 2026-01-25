@@ -1,7 +1,7 @@
 {
    "name":"Continuous Testing (CI/CD) Pipeline",
    "shortDescription": "Activity for integrating network testing into CI/CD pipelines with Velocity + iTest integration. STC Port A → NetScout L1 → DUT (Any) → NetScout L1 → STC Port B.",
-   "icon":"continuousTestingCICD/continuousTestingCICD.svg",
+   "icon":"continuousTestingCICD/continuousTestingCICD-icon.svg",
    "descriptionMarkdown":"continuousTestingCICD/continuousTestingCICD.md",
    "topology": [{
       "name": "Continuous Testing CI CD Pipeline Topology",
