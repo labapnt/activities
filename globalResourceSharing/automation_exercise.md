@@ -281,3 +281,26 @@ client.release_resources(allocation.id)
    - Enables transparent sharing
    - Simplifies resource management
    - Provides flexibility
+
+
+#### Lab-Site Configuration
+```yaml
+# Lab-Site Configuration
+lab_sites:
+  - name: "Lab-Site-A"
+    location: "Data Center A"
+    resources:
+      - "DUT1"
+      - "DUT2"
+    sharing:
+      enabled: true
+      accessible_by: ["Lab-Site-B"]
+  
+  - name: "Lab-Site-B"
+    location: "Data Center B"
+    shared_resources:
+      - source: "Lab-Site-A"
+        resources: ["DUT1", "DUT2"]
+```
+
+By following these steps, you can implement global resource sharing, prevent resource hoarding through resource abstraction, and enable efficient resource utilization across multiple topologies and lab-sites.
